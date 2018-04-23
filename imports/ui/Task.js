@@ -9,6 +9,7 @@ export default class Task extends Component {
     });
   }
 
+  // called when x is clicked to delete a task
   deleteThisTask() {
     Tasks.remove(this.props.task._id);
   }
@@ -30,7 +31,7 @@ export default class Task extends Component {
           onClick={this.toggleChecked.bind(this)}
         />
         <span className="text">
-          <strong>{this.props.task.username}</strong>:
+          <strong>{this.props.task.username}</strong>:&nbsp;
           {this.props.task.text}
         </span>
       </li>
